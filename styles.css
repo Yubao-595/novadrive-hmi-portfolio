@@ -44,6 +44,10 @@ img {
   max-width: 100%;
 }
 
+.responsive-picture {
+  display: contents;
+}
+
 button,
 a {
   -webkit-tap-highlight-color: transparent;
