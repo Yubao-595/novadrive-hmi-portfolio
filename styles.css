@@ -2305,3 +2305,354 @@ main {
 .theme-visuals figure{transition:opacity .3s ease,transform .42s cubic-bezier(.2,.75,.2,1),filter .3s ease}.theme-visuals[data-active-theme=night] figure:last-child,.theme-visuals[data-active-theme=day] figure:first-child{opacity:.38;filter:saturate(.45);transform:scale(.975)}.theme-visuals figure.is-selected{opacity:1;filter:none;transform:scale(1.015);z-index:1}
 @media(max-width:760px){.hero-image{transform:scale(1.01)}.journey-step:not(.is-active){opacity:1}.theme-switch{width:100%}.theme-switch button{min-width:0}}
 @media(prefers-reduced-motion:reduce){.motion-ready .hero-kicker,.motion-ready .hero h1 span,.motion-ready .hero-footer,.motion-ready .scroll-cue,.motion-ready .reveal{opacity:1;transform:none}.hero-image{transform:none!important}}
+
+/* v2 — keep every portfolio image complete and at its native ratio */
+.hero {
+  min-height: 0;
+  aspect-ratio: 16 / 9;
+}
+
+.hero-image {
+  object-fit: contain;
+  object-position: center;
+  transform: none;
+}
+
+.screen-collage {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 54px 18px;
+  width: min(1180px, 100%);
+  height: auto;
+  margin: 72px auto 0;
+}
+
+.screen-collage figure,
+.screen-main,
+.screen-side,
+.screen-adas,
+.screen-rest {
+  position: relative;
+  inset: auto;
+  width: auto;
+  aspect-ratio: auto;
+  transform: none;
+}
+
+.screen-main {
+  grid-column: 1 / -1;
+}
+
+.screen-collage img,
+.journey-overview img,
+.journey-step figure img,
+.rest-overview img,
+.rest-story figure img,
+.surface-pair figure img,
+.safety-images img,
+.theme-visuals img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  object-position: center;
+  transform: none;
+}
+
+.journey-step.is-active figure img {
+  transform: none;
+}
+
+.showcase-facts {
+  margin-top: 92px;
+}
+
+.surface-pair,
+.surface-pair-tall,
+.theme-visuals {
+  align-items: start;
+}
+
+.surface-pair figure,
+.surface-pair-tall figure,
+.surface-pair-tall figure:nth-child(2),
+.theme-visuals figure,
+.theme-visuals figure:nth-child(2) {
+  align-self: start;
+}
+
+.next-chapter {
+  min-height: 0;
+  aspect-ratio: 16 / 9;
+}
+
+.closing-cockpit {
+  object-fit: contain;
+  object-position: center;
+  transform: none;
+}
+
+@media (max-width: 980px) {
+  .screen-collage {
+    width: 100%;
+    height: auto;
+    margin-top: 64px;
+  }
+
+  .screen-main,
+  .screen-side {
+    width: auto;
+  }
+
+  .surface-group {
+    gap: 56px;
+  }
+}
+
+@media (max-width: 680px) {
+  main {
+    overflow-x: hidden;
+  }
+
+  .hero {
+    min-height: auto;
+    aspect-ratio: auto;
+    padding-top: 58px;
+    display: block;
+    background: #020708;
+  }
+
+  .hero-image {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    transform: none;
+  }
+
+  .hero-shade {
+    background:
+      linear-gradient(180deg, transparent 0%, rgba(2, 7, 8, 0.12) 45%, #020708 100%);
+  }
+
+  .hero-grid {
+    height: 60%;
+  }
+
+  .hero-content {
+    position: relative;
+    padding: 34px 18px 46px;
+  }
+
+  .hero-kicker {
+    margin: 0 0 30px;
+    padding-top: 14px;
+  }
+
+  .hero h1 {
+    gap: 0;
+    margin: 0;
+    font-size: clamp(72px, 24vw, 112px);
+    line-height: 0.86;
+  }
+
+  .hero-footer {
+    margin-top: 34px;
+  }
+
+  .showcase-copy h2 {
+    font-size: clamp(42px, 13vw, 58px);
+    line-height: 1.14;
+  }
+
+  .screen-collage {
+    grid-template-columns: 1fr;
+    gap: 54px;
+    margin: 56px 0 72px;
+  }
+
+  .screen-main {
+    grid-column: auto;
+  }
+
+  .screen-collage figure {
+    width: 100%;
+  }
+
+  .showcase-facts {
+    margin-top: 0;
+  }
+
+  .section-heading h2,
+  .definition-statement h3,
+  .roles-quote,
+  .journey-copy h3,
+  .rest-story-copy h3,
+  .surface-group-copy h3,
+  .safety-copy h3,
+  .theme-copy h3 {
+    letter-spacing: -0.025em;
+    overflow-wrap: break-word;
+  }
+
+  .section-heading h2 {
+    font-size: clamp(36px, 10.5vw, 46px);
+    line-height: 1.16;
+  }
+
+  .definition-statement h3 {
+    font-size: 34px;
+    line-height: 1.34;
+  }
+
+  .roles-quote {
+    font-size: 34px;
+    line-height: 1.3;
+  }
+
+  .journey-list {
+    gap: 94px;
+  }
+
+  .journey-step,
+  .journey-step:nth-child(even),
+  .rest-story article,
+  .rest-story article:nth-child(even) {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: stretch;
+  }
+
+  .journey-step figure,
+  .journey-step:nth-child(even) figure,
+  .rest-story article figure,
+  .rest-story article:nth-child(even) figure {
+    order: 2;
+    width: 100%;
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .journey-copy,
+  .journey-step:nth-child(even) .journey-copy,
+  .rest-story-copy,
+  .rest-story article:nth-child(even) .rest-story-copy {
+    order: 1;
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .journey-meta {
+    margin-bottom: 22px;
+  }
+
+  .journey-copy h3,
+  .rest-story-copy h3 {
+    font-size: 34px;
+  }
+
+  .journey-connector {
+    left: 18px;
+    bottom: -62px;
+  }
+
+  .journey-overview,
+  .rest-overview {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  .rest-section,
+  .surfaces-section,
+  .safety-section,
+  .system-section {
+    padding-top: 100px;
+    padding-bottom: 110px;
+  }
+
+  .next-chapter {
+    min-height: auto;
+    aspect-ratio: auto;
+    padding-top: 0;
+  }
+
+  .closing-cockpit {
+    position: relative;
+    inset: auto;
+    width: calc(100% + 36px);
+    height: auto;
+    margin: 0 -18px;
+  }
+
+  .closing-shade {
+    height: 48vw;
+    background: linear-gradient(180deg, transparent, var(--night));
+  }
+
+  .next-chapter > p {
+    margin-top: 54px;
+  }
+
+  .rest-rule > div {
+    min-height: 138px;
+  }
+
+  .rest-rule span {
+    margin-bottom: 28px;
+  }
+
+  .surface-group {
+    gap: 40px;
+    padding: 76px 0;
+  }
+
+  .surface-group-copy h3 {
+    margin-top: 26px;
+    font-size: 38px;
+  }
+
+  .surface-pair,
+  .surface-pair-tall,
+  .theme-visuals,
+  .safety-images {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .surface-pair figure,
+  .surface-pair-tall figure,
+  .theme-visuals figure,
+  .safety-images figure,
+  .journey-step figure,
+  .rest-story figure {
+    padding: 6px;
+    border-radius: 10px;
+  }
+
+  .surface-pair figcaption,
+  .theme-visuals figcaption {
+    padding: 10px 3px 3px;
+  }
+
+  .safety-compare,
+  .theme-compare {
+    padding-top: 76px;
+    padding-bottom: 90px;
+  }
+
+  .theme-compare {
+    align-items: stretch;
+  }
+
+  .showcase-facts div {
+    padding: 20px 2px;
+  }
+
+  .showcase-facts strong {
+    font-size: 30px;
+  }
+}
