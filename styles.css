@@ -17,3 +17,11 @@
     transform: none;
   }
 }
+
+/* Desktop closing frame: preserve the complete 16:9 cockpit while avoiding
+   exposed side bars on wide monitors. */
+@media (min-width: 981px) {
+  .next-chapter {
+    min-height: max(72vh, 56.25vw);
+  }
+}
