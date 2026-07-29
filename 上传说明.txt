@@ -1,30 +1,13 @@
-NovaDrive HMI 作品集｜GitHub Pages 上传包
+NovaDrive GitHub Pages 完整修复版 v6
 
-当前版本：手机加载优化 + 完整图片 + 新版三屏座舱 Mockup
+1. 解压压缩包。
+2. 将解压后的全部内容上传到 Yubao-595/novadrive-hmi-portfolio 仓库根目录。
+3. 同名文件全部覆盖，然后提交。
+4. 等待 GitHub Pages 更新约 1–3 分钟。
+5. 重新打开网址；如仍显示旧内容，使用 Ctrl + F5 强制刷新一次。
 
-本次已修正：
-- 首页和结尾页已替换为新版三屏座舱 Mockup
-- 手机端自动加载 800px WebP，桌面端自动加载 1600px WebP
-- 图片总加载量由约 25MB 降至手机版约 452KB、桌面版约 1.2MB
-- 修复一张内部不完整、可能解码失败的跨屏界面图
-- 所有界面图按原始宽高比完整展示
-- 取消固定高度、强制裁切与图片叠压
-- 核心总览改为清晰网格
-- 手机端重新安排图文顺序、字号与间距
-- 保留滚动显现、导航高亮和交互动效
-
-你只需要：
-1. 解压这个压缩包。
-2. 打开 GitHub 仓库 Yubao-595/novadrive-hmi-portfolio。
-3. 点击 Add file → Upload files。
-4. 把解压后看到的全部内容拖进去（index.html、styles.css、app.js、favicon.svg、assets 文件夹、上传说明.txt）。
-5. 页面下方点击 Commit changes。
-
-不要把压缩包本身直接上传，也不要再套一层文件夹。
-
-上传完成后无需重新设置 Pages，等待约 1–3 分钟后用手机重新打开原网址测试。
-
-原仓库中的 PNG 图片可以保留，不影响新版加载。
-
-作品集访问地址：
-https://yubao-595.github.io/novadrive-hmi-portfolio/
+本版本已包含：
+- 全部 36 张 WebP 图片资源
+- 修复后的相对资源路径与缓存版本号
+- 最新深色极简 N favicon
+- 暗色模式页面、响应式样式与交互脚本
